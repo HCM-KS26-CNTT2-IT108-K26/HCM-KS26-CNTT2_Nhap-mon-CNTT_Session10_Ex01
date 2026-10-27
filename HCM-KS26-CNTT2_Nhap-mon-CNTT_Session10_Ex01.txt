@@ -1,20 +1,20 @@
 ﻿Bài 1 : Chuẩn hóa quy trình đối soát giao dịch ví điện tử 
 PHẦN 1: PHÂN TÍCH
 Xác định Record và Field trong bảng Excel giao dịch
-* Field là: STT, Mã đối tác, Số giao dịch, Doanh số,...
-* Record là: MB, VietComBank, 1,000,000,....
+-Field là: STT, Mã đối tác, Số giao dịch, Doanh số,...
+-Record là: BIDV, 1,000,000,....
 
 
 PHẦN 3: KIỂM THỬ (Quy trình 4 điểm tìm nguyên nhân lỗi #N/A)
-1. Kiểm tra sự tồn tại của giá trị dò tìm (Lookup Value có trong bảng tham chiếu không?)
-* Nguyên nhân: Giá trị cần tra cứu không có trong cột đầu tiên của bảng tham chiếu (Lookup Table).
+1. Kiểm tra sự tồn tại của giá trị dò tìm (xem Lookup Value có trong bảng tham chiếu không)
+-Nguyên nhân: Giá trị cần tra cứu không có trong cột đầu tiên của bảng tham chiếu (Lookup Table).
      2.    Kiểm tra khoảng trắng thừa và ký tự ẩn
-* Nguyên nhân: Mã đem dò hoặc mã trong bảng nguồn chứa dấu cách ngầm 
+-Nguyên nhân: Mã đem dò hoặc mã trong bảng nguồn chứa dấu cách ngầm 
     3.     Kiểm tra định dạng dữ liệu
-* Nguyên nhân: Một bên lưu ở dạng số Number, bên còn lại lưu ở dạng chuỗi văn bản  , làm Excel coi đó là 2 giá trị khác nhau.
+-Nguyên nhân: Một bên lưu ở dạng số Number, bên còn lại lưu ở dạng chuỗi văn bản  , làm Excel coi đó là 2 giá trị khác nhau.
 
 
     4.     Kiểm tra tham số Range_lookup và Cố định vùng bảng dò
-* Nguyên nhân:
-* Chưa đặt tham số cuối cùng là False, khiến hàm tìm kiếm gần đúng và bảng nguồn chưa được sắp xếp.
-* Quên cố định tuyệt đối vùng bảng tham chiếu nên khi kéo công thức xuống dướ
+-Nguyên nhân:
+-Chưa đặt tham số cuối cùng là False, khiến hàm tìm kiếm gần đúng và bảng nguồn chưa được sắp xếp.
+-Quên cố định tuyệt đối vùng bảng tham chiếu nên khi kéo công thức xuống dướ
